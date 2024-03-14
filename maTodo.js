@@ -1,12 +1,11 @@
-import * as todoAction from './logique.js'
-
+import * as todoAction from './todoListAction.js'
+import { focusOnCurrentFilter } from "./todoListFilter.js";
 const list = document.querySelector('ul')
 const form = document.querySelector('form')
 let isLi = document.querySelector('li.todo')
 
 //Initialisation des listener sur une liste déjà présente
 if (isLi) {
-    console.log('OUIIIIIII');
     todoAction.isChecked()
     todoAction.removeTodo()
 }
@@ -20,5 +19,10 @@ form.addEventListener('submit',(e)=>{
     todoAction.isChecked()
     todoAction.removeTodo()
 })
+//FILTER
+const buttons = document.querySelectorAll('div.btn-group > button')
+    buttons.forEach(button => {
+        button.addEventListener('click', focusOnCurrentFilter)
+});
 
 

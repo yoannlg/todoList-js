@@ -3,7 +3,7 @@ let totoID = 1
 //ADD TODO
 export const addTodo = (label) =>{
     const newTodo = document.createElement('li')
-    newTodo.classList.add("todo", "list-group-item", "d-flex", "align-items-center")
+    newTodo.classList.add("todo", "m-1", "list-group-item", "d-flex", "align-items-center")
     newTodo.innerHTML=
         `
         <input class="form-check-input" type="checkbox" id="todo-${totoID}">
