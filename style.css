@@ -5,3 +5,9 @@ body {
 .checked {
     background-color: #49d880;
 }
+
+.hide-completed .is-completed,
+.hide-todo .todo:not(.is-completed)
+{
+    display: none!important;
+}
