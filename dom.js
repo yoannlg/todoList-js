@@ -15,3 +15,7 @@ export function createElement(tagName, attributes={}) {
     }
     return element
 }
+
+export function cloneTemplate(id) {
+    return  document.getElementById(id).content.cloneNode(true)
+}

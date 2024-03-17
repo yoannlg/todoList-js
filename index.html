@@ -12,7 +12,9 @@
 <body>
 
     <section class="container pt-5" id="todolist">
-        <!-- <form class="d-flex pb-4">
+
+        <template id="todolist-layaout">
+        <form class="d-flex pb-4">
             <input required="" class="form-control" type="text" placeholder="Acheter des patates..." name="newTodo" data-com.bitwarden.browser.user-edited="yes">
             <button class="btn btn-primary">Ajouter</button>
         </form>
@@ -24,48 +26,23 @@
             </div>
 
             <ul class="list-group">
-                <li class="todo m-1 list-group-item d-flex align-items-center">
-                    <input class="form-check-input" type="checkbox" id="todo-${totoID}">
-                    <label class="ms-2 form-check-label" for="todo${totoID}">
-                        todo 1
-                    </label>
-                    <label class="ms-auto btn btn-danger btn-sm">
-                        <i class="bi-trash">
-                        </i>
-                    </label>
-                </li>
-                <li class="todo m-1 list-group-item d-flex align-items-center checked">
-                    <input class="form-check-input" type="checkbox" id="todo-${totoID}">
-                    <label class="ms-2 form-check-label" for="todo${totoID}">
-                        todo 2
-                    </label>
-                    <label class="ms-auto btn btn-danger btn-sm">
-                        <i class="bi-trash">
-                        </i>
-                    </label>
-                </li>
-                <li class="todo m-1 list-group-item d-flex align-items-center">
-                    <input class="form-check-input" type="checkbox" id="todo-${totoID}">
-                    <label class="ms-2 form-check-label" for="todo${totoID}">
-                        todo 3
-                    </label>
-                    <label class="ms-auto btn btn-danger btn-sm">
-                        <i class="bi-trash">
-                        </i>
-                    </label>
-                </li>
-                <li class="todo m-1 list-group-item d-flex align-items-center">
-                    <input class="form-check-input" type="checkbox" id="todo-${totoID}">
-                    <label class="ms-2 form-check-label" for="todo${totoID}">
-                        todo 4
-                    </label>
-                    <label class="ms-auto btn btn-danger btn-sm">
-                        <i class="bi-trash">
-                        </i>
-                    </label>
-                </li>
+                
             </ul>
-        </main> -->
+        </main>
+    </template>
+
+    <template id="todolist-item">
+        <li class="todo m-1 list-group-item d-flex align-items-center">
+            <input class="form-check-input" type="checkbox">
+            <label class="ms-2 form-check-label">
+                
+            </label>
+            <button class="ms-auto btn btn-danger btn-sm">
+                <i class="bi-trash"></i>
+            </button>
+        </li>
+    </template>
+
     </section>
 <script src="./app.js" type="module"></script>
 <!-- <script src="./maTodo.js" type="module"></script> -->
