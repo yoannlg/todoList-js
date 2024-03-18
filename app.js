@@ -3,7 +3,16 @@ import { fetchJSON } from './api.js';
 import { createElement } from "./dom.js";
 
 try {
-    const todos = await fetchJSON('https://jsonplaceholder.typicode.com/todos?_limit=5')
+    //const todos = await fetchJSON('https://jsonplaceholder.typicode.com/todos?_limit=5')
+    const todosInStorage = localStorage.getItem('todos')?.toString()
+    console.log("STORAGE :::::: ");
+    console.log(todosInStorage);
+    let todos = []
+    if (todosInStorage) {
+        console.log("AIAIIAIAIAIAIAIAIAI");
+        todos = JSON.parse(todosInStorage)
+    }
+    
     const list = new TodoList(todos)
     list.appendTo(document.querySelector('#todolist'))
     console.log(todos);

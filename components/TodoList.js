@@ -63,9 +63,14 @@ export class TodoList {
         }
         const item = new TodoListItem(todo)
         this.#listElement.prepend(item.element)
+        this.#todos.push(todo)
+        this.#onUpdate()
         form.reset()
     }
 
+    #onUpdate () {
+        localStorage.setItem('todos', JSON.stringify(this.#todos))
+    }
     /**
      * 
      * @param {PointerEvent} e 
@@ -128,7 +133,6 @@ class TodoListItem {
         label.innerText = todo.title
 
         const button = li.querySelector('button')
-        console.log(button);
         /* const button = createElement('button', {
             class: 'ms-auto btn btn-danger btn-sm'
         }) */
